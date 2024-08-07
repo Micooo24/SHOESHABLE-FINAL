@@ -1,0 +1,12 @@
+composer require laravel/scout
+
+php artisan vendor:publish --provider="Laravel\Scout\ScoutServiceProvider"
+
+composer require algolia/algoliasearch-client-php
+
+SCOUT_DRIVER=algolia
+ALGOLIA_APP_ID="6U15BJ87OK"
+ALGOLIA_API_KEY="97a55b8ebb266b1b57f01f3ed49f9c94"
+
+php artisan scout:import "App\Models\Product"
+

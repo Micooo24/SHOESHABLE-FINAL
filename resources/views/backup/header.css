@@ -1,0 +1,262 @@
+/* Login and Registration Design */
+
+/* Modal Styles */
+.modal-content {
+    background-color: #ADD8E6; /* Light Blue */
+    color: #001f3f; /* Dark Blue */
+    border-radius: 8px;
+    animation: fadeIn 0.5s ease;
+    border: 1px solid #001f3f; /* Dark Blue border for modal */
+}
+
+.modal-content.modal-exit {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#89CFF0;
+    color: #000; /* Light font color for header */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.logo-title-container {
+    width: 100%;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #001f3f; /* Dark Blue */
+    border: none;
+    color: #fff; /* White text color */
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #000080; /* Even darker shade for hover effect */
+}
+/* Input Styles */
+.input-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.input-group_input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #001f3f; /* Dark Blue border */
+    border-radius: 4px;
+    background-color: #fff; /* White background for inputs */
+    color: #001f3f; /* Dark Blue text color */
+    font-size: 16px;
+    transition: all 0.3s ease, transform 0.3s ease;
+}
+
+.input-group_label {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: #001f3f; /* Dark Blue */
+    font-weight: normal;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    background-color: #fff; /* White background for labels */
+    padding: 0 4px; /* To avoid overlapping with input border */
+}
+
+.input-group_input:focus ~ .input-group_label,
+.input-group_input:not(:placeholder-shown) ~ .input-group_label {
+    top: -12px;
+    left: 8px;
+    font-size: 12px;
+    color: #000;
+    background-color: #ADD8E6; /* Light Blue */
+    padding: 0 4px; /* Adjust padding */
+}
+
+/* Additional animation for input when label is moved */
+.input-group_input.has-focus {
+    transform: translateY(-10px); /* Move input field slightly up */
+}
+
+
+body {
+    font-family: 'Lucida Bright', Georgia, serif; /* Setting Lucida Bright as the font */
+}
+
+
+/* Flash Message Design */
+#flash-message {
+    position: fixed; /* Fixed position to keep it visible */
+    top: 20px; /* Adjust top position as needed */
+    right: 20px; /* Adjust right position as needed */
+    z-index: 1000; /* Ensure it's above other content */
+    display: block; /* Ensure it's visible */
+    width: 300px; /* Adjust width as needed */
+    padding: 15px; /* Padding for better readability */
+    background-color: #00008B; /* Red background for error */
+    color: #fff; /* White text color */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+/* Top navbar styling */
+#templatemo_nav_top {
+    padding: 0.5rem 0;
+    background-color: lightblue !important;
+}
+
+#templatemo_nav_top .navbar-sm-brand {
+    color: black !important;
+}
+
+#templatemo_nav_top .navbar-sm-brand i {
+    color: black; /* Make the icon color black */
+    font-size: 1.2rem; /* Adjust icon size if needed */
+    margin-right: 5px; /* Optional: Adjust spacing between icon and text */
+}
+
+/* Main navbar styling */
+.navbar {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: white;
+    border-bottom: 2px solid black;
+}
+
+.navbar-nav {
+    margin: 0 auto; /* Center align navbar links */
+}
+
+.navbar-brand {
+    margin-right: 20px; /* Space between logo and links */
+}
+
+.navbar-nav {
+    margin-left: auto; /* Pushes the links to the right */
+}
+
+.nav-item + .nav-item {
+    margin-left: 20px; /* Adjust space between adjacent nav items */
+}
+
+/* Increase the margin between Login and Contact */
+.navbar-nav .nav-item.login + .nav-item.contact {
+    margin-left: 40px; /* Increase the margin between Login and Contact */
+}
+
+/* Adjust padding and font weight for nav links */
+.navbar-nav .nav-item .nav-link {
+    padding: 0 1.5rem; /* Adjust spacing between links */
+    font-weight: bold;
+}
+
+/* Optional: Adjust any specific styles for navbar right section */
+.navbar .navbar-right {
+    margin-left: 5px;
+}
+
+/* Login Modal styling */
+.modal-dialog {
+    margin: 10% auto; /* Center modal vertically */
+    max-width: 500px; /* Adjust width of modal */
+}
+
+.modal-content {
+    background-color: #ffffff; /* White background for modal content */
+    border: 2px solid #333333; /* Dark gray border */
+}
+
+.modal-body {
+    text-align: center; /* Center align modal contents */
+}
+
+.btn-login {
+    background-color: #007bff; /* Bootstrap primary color for login button */
+    color: #ffffff; /* White text */
+    font-weight: bold; /* Bold text for login button */
+    width: 50%;
+    margin-top: 20px;
+}
+
+.logo-title-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-title-container img {
+    max-width: 150px;
+    margin-bottom: 0;
+}
+
+.logo-title-container h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #333333;
+}
+
+.modal-header .close {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    color: #333333;
+}
+
+.menu-links .nav-link a {
+    color: black;
+    text-decoration: none;
+}
+
+.menu-links .nav-link a:hover {
+    color: #333;
+}
+
+.menu-links .nav-link .icon {
+    margin-right: 10px;
+}
+
+.menu-links .nav-link .nav-text {
+    font-size: 16px;
+}
+
+.menu-links .nav-link-item {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.menu-links .nav-link-item:hover {
+    background-color: #f0f0f0;
+}
+
+.bottom-content .nav-link-item {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.bottom-content .nav-link-item:hover {
+    background-color: #f0f0f0;
+}

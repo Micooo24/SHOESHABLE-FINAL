@@ -1,0 +1,66 @@
+.card.processing-order {
+    border: 3px solid #007bff;
+    border-radius: 0.25rem;
+    margin-bottom: 2px;
+}
+
+.card.shipped-order {
+    border: 3px solid orange;
+    border-radius: 0.25rem;
+    margin-bottom: 2px;
+}
+
+.card.cancelled-order {
+    border: 3px solid #dc3545;
+    border-radius: 0.25rem;
+    margin-bottom: 2px;
+}
+
+.card.delivered-order {
+    border: 3px solid #28a745;
+    border-radius: 0.25rem;
+    margin-bottom: 2px;
+}
+
+.status-separator {
+    border-bottom: 5px solid black;
+    margin: 10px 0;
+    margin-top: 5px;
+}
+
+.status-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #000;
+}
+
+.order-products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.order-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.order-product img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.order-product .details {
+    text-align: center;
+}
+
+.order-product .details p {
+    margin: 0;
+}

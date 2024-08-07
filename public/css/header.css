@@ -1,0 +1,291 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 2px solid #87CEFA; /* Light blue border */
+    border-radius: 25px;
+    padding: 5px 10px;
+    background-color: #E0E0E0;
+    width: 40%;
+    max-width: 400px;
+}
+
+.search-bar .form-control {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    flex: 1;
+    color: #757575;
+}
+
+.search-bar .clear-btn {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 0 10px;
+    border-radius: 50%;
+    margin-left: -30px;
+    cursor: pointer;
+}
+
+.search-bar .clear-btn i {
+    font-size: 1rem;
+}
+
+.modal-content {
+    background-color: #ADD8E6; /* Light Blue */
+    color: #001f3f; /* Dark Blue */
+    border-radius: 8px;
+    animation: fadeIn 0.5s ease;
+    border: 1px solid #001f3f; /* Dark Blue border for modal */
+}
+
+.modal-content.modal-exit {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#89CFF0;
+    color: #000; /* Light font color for header */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.logo-title-container {
+    width: 100%;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #001f3f; /* Dark Blue */
+    border: none;
+    color: #fff; /* White text color */
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #000080; /* Even darker shade for hover effect */
+}
+/* Input Styles */
+.input-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.input-group_input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #001f3f; /* Dark Blue border */
+    border-radius: 4px;
+    background-color: #fff; /* White background for inputs */
+    color: #001f3f; /* Dark Blue text color */
+    font-size: 16px;
+    transition: all 0.3s ease, transform 0.3s ease;
+}
+
+.input-group_label {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: #001f3f; /* Dark Blue */
+    font-weight: normal;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    background-color: #fff; /* White background for labels */
+    padding: 0 4px; /* To avoid overlapping with input border */
+}
+
+.input-group_input:focus ~ .input-group_label,
+.input-group_input:not(:placeholder-shown) ~ .input-group_label {
+    top: -12px;
+    left: 8px;
+    font-size: 12px;
+    color: #000;
+    background-color: #ADD8E6; /* Light Blue */
+    padding: 0 4px; /* Adjust padding */
+}
+
+/* Additional animation for input when label is moved */
+.input-group_input.has-focus {
+    transform: translateY(-10px); /* Move input field slightly up */
+}
+
+body {
+    font-family: 'Quick Sand', 'sans-serif'; /* Setting Lucida Bright as the font */
+}
+
+#flash-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+    display: block;
+    width: 300px;
+    padding: 15px;
+    background-color: #00008B;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease;
+}
+
+
+#templatemo_nav_top {
+    padding: 0.5rem 0;
+    background-color: lightblue !important;
+    border: none;
+}
+
+#templatemo_nav_top .navbar-sm-brand {
+    color: black !important;
+}
+
+#templatemo_nav_top .navbar-sm-brand i {
+    color: black;
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+.navbar {
+    background-color:aliceblue;
+    border-bottom: 1px solid black;
+    border: none;
+}
+
+.navbar-nav {
+    margin: 0 auto; /* Center align navbar links */
+}
+
+.navbar-brand {
+    margin-right: 20px;
+    font-family: 'Quick Sand', 'sans-serif';
+}
+
+.navbar-nav {
+    margin-left: auto; /* Pushes the links to the right */
+}
+
+.nav-item + .nav-item {
+    margin-left: 20px; /* Adjust space between adjacent nav items */
+}
+
+/* Increase the margin between Login and Contact */
+.navbar-nav .nav-item.login + .nav-item.contact {
+    justify-content: flex-end;
+    margin-left: 20px;
+}
+
+/* Adjust padding and font weight for nav links */
+.navbar-nav .nav-item .nav-link {
+    /* padding: 0 1.5rem;  */
+    font-weight: bold;
+}
+
+/* Optional: Adjust any specific styles for navbar right section */
+.navbar .navbar-right {
+    margin-left: 5px;
+}
+
+/* Login Modal styling */
+.modal-dialog {
+    margin: 10% auto; /* Center modal vertically */
+    max-width: 500px; /* Adjust width of modal */
+}
+
+.modal-content {
+    background-color: #ffffff; /* White background for modal content */
+    border: 2px solid #333333; /* Dark gray border */
+}
+
+.modal-body {
+    text-align: center; /* Center align modal contents */
+}
+
+.btn-login {
+    background-color: #007bff; /* Bootstrap primary color for login button */
+    color: #ffffff; /* White text */
+    font-weight: bold; /* Bold text for login button */
+    width: 50%;
+    margin-top: 20px;
+}
+
+.logo-title-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-title-container img {
+    max-width: 150px;
+    margin-bottom: 0;
+}
+
+.logo-title-container h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #333333;
+}
+
+.modal-header .close {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    color: #333333;
+}
+
+.menu-links .nav-link a {
+    color: black;
+    text-decoration: none;
+}
+
+.menu-links .nav-link a:hover {
+    color: #333;
+}
+
+.menu-links .nav-link .icon {
+    margin-right: 10px;
+}
+
+.menu-links .nav-link .nav-text {
+    font-size: 16px;
+}
+
+.menu-links .nav-link-item {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.menu-links .nav-link-item:hover {
+    background-color: #f0f0f0;
+}
+
+.bottom-content .nav-link-item {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.bottom-content .nav-link-item:hover {
+    background-color: #f0f0f0;
+}
